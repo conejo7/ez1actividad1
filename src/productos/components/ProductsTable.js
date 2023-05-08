@@ -1,7 +1,7 @@
 
 import {PRODUCTS} from "./Products";
 
-import '../styles/ProductRow.css';
+import '../../styles/ProductRow.css';
 
 import {useState} from "react";
 

@@ -1,0 +1,27 @@
+
+
+busqueda{
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    /* Agrega un estilo de cursor cuando se pasa el mouse sobre el botón */
+    cursor: pointer;
+
+}
+
+.button-style + .button-style {
+    margin-top: 1rem;
+}
+
+.alertInfo {
+    color: #0c5460;
+    background-color: #87c8f1;
+    border-color: #bee5eb;
+}
+
+.alertDanger {
+    color: #0c5460;
+    background-color: #f35d5d;
+    border-color: #bee5eb;
+    font-weight: bold;
+}
