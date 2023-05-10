@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, {useContext} from 'react';
 import '../../styles/Navbar.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {ProductosContext} from "./ProductosContext";
 export const Navbar1 = () => {
 
     const navigate = useNavigate();
@@ -12,19 +13,37 @@ export const Navbar1 = () => {
     const onLogout = () => {
         navigate('/login', {replace: true});
     }
+    const [producto, setProductos] = useContext(ProductosContext);
 
+    const quantity = producto.reduce((acc, curr) => {
+        return acc + curr.quantity;
+    }, 0);
 
     return (
         <>
+            <nav>
+                <Link to={"/carne"} >
+                    <h2>Store</h2>
+                </Link>
+                <ul className="nav-list">
+                    <Link to={"/carrito"} >
+                        <li>
+                            Cart items: <span className="cart-count">{quantity}</span>
+                        </li>
+                    </Link>
+                </ul>
+            </nav>
             <Navbar className="navbar">
                 <Container>
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/carne">CARNE NORMAL</Nav.Link>
                         <Nav.Link href="/vip">CARNE VIP</Nav.Link>
-                        <Nav.Link href="/tipos">TIPOS</Nav.Link>
+                        <Nav.Link href="/tienda">TIENDA</Nav.Link>
+                        <Nav.Link href="/compras">COMPRAR</Nav.Link>
                         <Nav.Link href="/table">PRODUCTOS</Nav.Link>
                         <Nav.Link href="/search">BUSCAR</Nav.Link>
+                        <Nav.Link href="/carrito">CARRITO DE COMPRAS {quantity}</Nav.Link>
                     </Nav>
                     <button
                         className="nav-item nav-link btn"

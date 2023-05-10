@@ -16,10 +16,13 @@ export const AppRouter = () => {
         <>
             {/*añadimos padding*/}
                <div className="container">
-                   <Routes>
-                       <Route path="login" element={<Login/>}/>
-                       <Route path="/*" element={<ProductRoutes/>}/>
-                   </Routes>
+
+                       <Routes>
+                           <Route path="login" element={<Login/>}/>
+                           <Route path="/*" element={<ProductRoutes/>}/>
+                       </Routes>
+
+
                </div>
 
         </>
