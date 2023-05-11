@@ -21,26 +21,26 @@ export const Navbar1 = () => {
 
     return (
         <>
-            <nav>
-                <Link to={"/carne"} >
-                    <h2>Store</h2>
-                </Link>
-                <ul className="nav-list">
-                    <Link to={"/carrito"} >
-                        <li>
-                            Cart items: <span className="cart-count">{quantity}</span>
-                        </li>
-                    </Link>
-                </ul>
-            </nav>
+            {/*<nav>*/}
+            {/*    <Link to={"/carne"} >*/}
+            {/*        <h2>Store</h2>*/}
+            {/*    </Link>*/}
+            {/*    <ul className="nav-list">*/}
+            {/*        <Link to={"/carrito"} >*/}
+            {/*            <li>*/}
+            {/*                Cart items: <span className="cart-count">{quantity}</span>*/}
+            {/*            </li>*/}
+            {/*        </Link>*/}
+            {/*    </ul>*/}
+            {/*</nav>*/}
+            <br/>
             <Navbar className="navbar">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home">Navbar</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home">SELECCIONE SU COMPRA</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/carne">CARNE NORMAL</Nav.Link>
-                        <Nav.Link as={Link} to="/vip">CARNE VIP</Nav.Link>
-                        <Nav.Link as={Link} to="/tienda">TIENDA</Nav.Link>
-                        <Nav.Link as={Link} to="/compras">COMPRAR</Nav.Link>
+                        <Nav.Link as={Link} to="/carne">PRODUCTO NORMAL</Nav.Link>
+                        <Nav.Link as={Link} to="/especial">PRODUCTO ESPECIAL</Nav.Link>
+                        <Nav.Link as={Link} to="/corriente">PRODUCTO CORRIENTE</Nav.Link>
                         <Nav.Link as={Link} to="/table">PRODUCTOS</Nav.Link>
                         <Nav.Link as={Link} to="/search">BUSCAR</Nav.Link>
                         <Nav.Link as={Link} to="/carrito">CARRITO DE COMPRAS {quantity}</Nav.Link>

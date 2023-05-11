@@ -37,7 +37,7 @@ export const CarneImage = ({
 
     const quantityPerItem = getQuantityById(id);
 
-    const carneImageUrl = `/assets/carne/${id}.jpg1`;
+    const carneImageUrl = `/assets/carne/${id}.jpg`;
     //console.log(carneImageUrl);
 
     return (
@@ -69,7 +69,7 @@ export const CarneImage = ({
                 <div className="card">
                     <div className="row">
                         <div className="col">
-                            <img src={carneImageUrl} className="card-img"/>
+                            <img src={carneImageUrl} className="carneImage"/>
                             {/*<img src={`/assets/carne/${id}.jpg`} className="card-img" alt="blank"/>*/}
                         </div>
 

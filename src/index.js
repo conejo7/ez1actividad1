@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Busqueda.css'
 import './styles/Navbar.css'
 import './styles/ProductRow.css'
+import './styles/CarneImage.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,12 +1,13 @@
 import React from 'react';
 import {CarnesList} from "../components/CarnesList";
 
-export const CarneVip = () => {
+export const CarneCorriente = () => {
     return (
         <>
             <div>
-                <h1>Carne Especial</h1>
-                <CarnesList categoria={'vip'}/>
+                <h1>Carne Corriente</h1>
+                <CarnesList categoria={'corriente'}/>
+
             </div>
         </>
     );

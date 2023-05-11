@@ -22,7 +22,8 @@ export const carnes = [
         'precio': '3.80',
         'categoria': 'vip',
         'stock': '40',
-        'detalles': 'Platos a la carta'
+        'detalles': 'Platos a la carta',
+        'producto': 'PRODUCTOS002'
     },
     {
         'id': 'CAR002',
@@ -30,7 +31,8 @@ export const carnes = [
         'precio': '2.80',
         'categoria': 'normal',
         'stock': '30',
-        'detalles': 'Almuerzos'
+        'detalles': 'Almuerzos',
+        'producto': 'PRODUCTOS001'
     }
 
 ];

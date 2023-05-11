@@ -15,13 +15,17 @@ export const CarritoCompras = () => {
         0
     );
     return (
+        <>
         <div className="cart-container">
-            <div>
-                <div>Items in cart: {quantity}</div>
-                <div>Total: ${totalPrice}</div>
-                <button onClick={() => console.log(product)}>Checkout</button>
+            <div className="card" >
+                <div className="card-body">
+                    <h5 className="card-title">Items en el carrito: {quantity}</h5>
+                    <h6 className="card-subtitle mb-2">Total: ${totalPrice}</h6>
+                    <p className="card-text">Precio a pagar; Muchas gracias por su compra</p>
+                </div>
             </div>
         </div>
+        </>
     );
 };
 

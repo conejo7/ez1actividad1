@@ -26,21 +26,21 @@ export const Productos = () => {
         <div className="row mt-5">
             <div className="col-4">
                 <img
-                    src={ `/assets/heroes/${ id }.jpg` }
+                    src={ `/assets/productos/${ carne.producto }.jpg` }
                     alt={ carne.detalles }
                     className="img-thumbnail animate__animated animate__fadeInLeft"
                 />
             </div>
 
             <div className="col-8">
-                <h3>{ carne.precio }</h3>
+                <h3>Precio: { carne.precio }</h3>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item"> <b>Alter ego:</b> { carne.categoria } </li>
-                    <li className="list-group-item"> <b>Publisher:</b> { carne.stock } </li>
-                    <li className="list-group-item"> <b>First appearance:</b> { carne.detalles } </li>
+                    <li className="list-group-item"> <b>Nombre:</b> { carne.nombre } </li>
+                    <li className="list-group-item"> <b>Stock:</b> { carne.stock } </li>
+                    <li className="list-group-item"> <b>Apreciación:</b> { carne.detalles } </li>
                 </ul>
 
-                <h5 className="mt-3"> Characters </h5>
+                <h5 className="mt-3"> Característica </h5>
                 <p>{ carne.categoria }</p>
 
                 <button
