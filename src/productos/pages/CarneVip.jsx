@@ -6,7 +6,7 @@ export const CarneVip = () => {
         <>
             <div>
                 <h1>Carne Especial</h1>
-                <CarnesList categoria={'vip'}/>
+                <CarnesList categoria={'especial'}/>
             </div>
         </>
     );
