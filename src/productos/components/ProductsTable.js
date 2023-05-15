@@ -1,22 +1,23 @@
 
 import {PRODUCTS} from "./Products";
 
+import {carnes} from "./Products";
 import '../../styles/ProductRow.css';
 
 import {useState} from "react";
 
 
 function ProductRow({ product }) {
-    const name = product.stocked ? product.name : // product.name;
+    const name = product.stock ? product.nombre : // product.name;
         <span className="span">
              {product.name}
         </span>;
-    console.log(product.stocked)
-    const stock = product.stocked ? "Tiene Stock" : "No tiene Stock"
+    console.log(product.stock)
+    const stock = product.stock ? "Tiene Stock" : "No tiene Stock"
     return (
         <tr>
             <td>{name}</td>
-            <td>{product.price}</td>
+            <td>{product.precio}</td>
             <td>{stock}</td>
         </tr>
     );
@@ -35,23 +36,23 @@ function ProductTable( {products, filterText, inStockOnly} ){
     let lastCategory = null;
 
     products.forEach((elem) => {
-        if (elem.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1){
+        if (elem.nombre.toLowerCase().indexOf(filterText.toLowerCase()) === -1){
             return ;
         }
-        if (inStockOnly && !elem.stocked){
+        if (inStockOnly && !elem.stock){
             return;
         }
-        if (elem.category !== lastCategory){
+        if (elem.categoria !== lastCategory){
             rows.push(
                 <ProductCategoryRow
-                    category ={elem.category}
-                    key={elem.category}/>
+                    category ={elem.categoria}
+                    key={elem.id}/>
             );
         }
         rows.push(
             <ProductRow
                 product={elem}
-                key={elem.name} />
+                key={elem.nombre} />
         );
         lastCategory = elem.category;
     });
@@ -59,9 +60,9 @@ function ProductTable( {products, filterText, inStockOnly} ){
         <table>
             <thead>
             <tr>
-                <th>Nombre </th>
-                <th>Precio </th>
-                <th>Stock</th>
+                <th>Nombre   </th>
+                <th>Precio      </th>
+                <th>Cantidad disponible</th>
             </tr>
             </thead>
             <tbody>{rows}</tbody>
@@ -69,7 +70,7 @@ function ProductTable( {products, filterText, inStockOnly} ){
     );
 }
 
-function SearchBar( {filterText,inStockOnly, onFilterTextChange, onInStockOnlyChange}) {
+function SearchBar( {filterText, onFilterTextChange}) {
     return (
         <form>
             <input
@@ -78,14 +79,7 @@ function SearchBar( {filterText,inStockOnly, onFilterTextChange, onInStockOnlyCh
                 value={filterText}
                 onChange={(e) => onFilterTextChange(e.target.value)}
             />
-            <label>
-                <input
-                    type={"checkbox"}
-                    checked={inStockOnly}
-                    onChange={(e) => onInStockOnlyChange(e.target.checked)} />
-                />
-                Visuaizar productos con stock
-            </label>
+
         </form>
     );
 }
@@ -112,7 +106,7 @@ function FilterableProductTable({products}) {
 }
 
 export function ProductsTable() {
-    return <FilterableProductTable products={PRODUCTS} />;
+    return <FilterableProductTable products={carnes} />;
 }
 
 

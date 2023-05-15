@@ -4,7 +4,7 @@ import {carnes} from "../components/Products";
 
 export const getCarnesByCategoria = ( categoria ) => {
 
-    const validCategorias = ['vip', 'normal','corriente'];
+    const validCategorias = ['especial', 'normal','corriente'];
     if (!validCategorias.includes(categoria)){
         throw new Error(`${ categoria } no valida`);
     }
