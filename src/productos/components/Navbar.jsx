@@ -21,22 +21,10 @@ export const Navbar1 = () => {
 
     return (
         <>
-            {/*<nav>*/}
-            {/*    <Link to={"/carne"} >*/}
-            {/*        <h2>Store</h2>*/}
-            {/*    </Link>*/}
-            {/*    <ul className="nav-list">*/}
-            {/*        <Link to={"/carrito"} >*/}
-            {/*            <li>*/}
-            {/*                Cart items: <span className="cart-count">{quantity}</span>*/}
-            {/*            </li>*/}
-            {/*        </Link>*/}
-            {/*    </ul>*/}
-            {/*</nav>*/}
             <br/>
             <Navbar className="navbar">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home">SELECCIONE SU COMPRA</Navbar.Brand>
+                    <Navbar.Brand >SELECCIONE SU COMPRA</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/carne">PRODUCTO NORMAL</Nav.Link>
                         <Nav.Link as={Link} to="/especial">PRODUCTO ESPECIAL</Nav.Link>
@@ -46,7 +34,7 @@ export const Navbar1 = () => {
                         <Nav.Link as={Link} to="/carrito">CARRITO DE COMPRAS {quantity}</Nav.Link>
                     </Nav>
                     <button
-                        className="nav-item nav-link btn"
+                        className="button-salir"
                          onClick={ onLogout }
                     >
                         Salir

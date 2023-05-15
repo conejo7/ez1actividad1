@@ -44,7 +44,7 @@ export const Productos = () => {
                 <p>{ carne.categoria }</p>
 
                 <button
-                    className="btn btn-outline-primary"
+                    className="button-regresar"
                     onClick={ onNavigateBack }
                 >
                     Regresar
@@ -56,4 +56,3 @@ export const Productos = () => {
     );
 };
 
-// export default Productos;

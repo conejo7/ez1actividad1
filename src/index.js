@@ -9,6 +9,7 @@ import './styles/Busqueda.css'
 import './styles/Navbar.css'
 import './styles/ProductRow.css'
 import './styles/CarneImage.css'
+import './styles/Carrito.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

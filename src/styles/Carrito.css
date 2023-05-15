@@ -1,0 +1,47 @@
+.card-subtitle {
+
+
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.button-salir {
+    background-color: #36b8e7;
+    border: 0 solid #ebe7e5;
+    color: #000000;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    text-align: center;
+    width: 100%;
+    max-width: 160px;
+    position: relative;
+    user-select: none;
+
+}
+
+.button-regresar {
+    background-color: #87c8f1;
+    border: 0 solid #ebe7e5;
+    color: #000000;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    text-align: center;
+    width: 100%;
+    max-width: 160px;
+    position: relative;
+    user-select: none;
+
+}
+
+.button-53:hover:after {
+    bottom: 2px;
+    left: 2px;
+}

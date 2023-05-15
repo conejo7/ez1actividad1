@@ -8,13 +8,7 @@ export const getCarnesByCategoria = ( categoria ) => {
     if (!validCategorias.includes(categoria)){
         throw new Error(`${ categoria } no valida`);
     }
-
     return carnes.filter( carnes => carnes.categoria === categoria);
 
-    // return (
-    //     <div>
-    //         carnes.
-    //     </div>
-    // );
 };
 

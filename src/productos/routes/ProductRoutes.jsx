@@ -6,7 +6,6 @@ import {CarneCorriente, CarneNormal, CarneVip, ProductosGeneral} from "../pages"
 import {Search} from "../pages/Search";
 import {Productos} from "../pages/Productos";
 import {ProductosProvider} from "../components/ProductosContext";
-import {CarnesList} from "../components/CarnesList";
 import {CarritoCompras} from "../components/CarritoCompras";
 
 
@@ -23,6 +22,7 @@ export const ProductRoutes = () => {
                     <Route path="search" element={<Search/>}/>
                     <Route path="productos/:id" element={<Productos/>}/>
                     <Route path="carrito" element={<CarritoCompras/>}/>
+
                 </Routes>
                 </ProductosProvider>
 
