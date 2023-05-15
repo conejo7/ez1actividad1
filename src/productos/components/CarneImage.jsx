@@ -15,10 +15,10 @@ export const CarneImage = ({
     const [product, setProduct] = useContext(ProductosContext);
 
     const addToCart = () => {
-        setProduct((currItems) => {
-            const isItemsFound = currItems.find((item) => item.id === id);
+        setProduct((elem) => {
+            const isItemsFound = elem.find((item) => item.id === id); //validacion se busca si el item esta dentro de los items
             if (isItemsFound) {
-                return currItems.map((item) => {
+                return elem.map((item) => {
                     if (item.id === id) {
                         return {...item, quantity: item.quantity + 1};
                     } else {
@@ -26,7 +26,7 @@ export const CarneImage = ({
                     }
                 });
             } else {
-                return [...currItems, {id, quantity: 1, precio}];
+                return [...elem, {id, quantity: 1, precio}];
             }
         });
     };
@@ -35,7 +35,7 @@ export const CarneImage = ({
         return product.find((item) => item.id === id)?.quantity || 0;
     };
 
-    const quantityPerItem = getQuantityById(id);
+    const cantidadporItem = getQuantityById(id);
 
     const carneImageUrl = `/assets/carne/${id}.jpg`;
     //console.log(carneImageUrl);
@@ -44,25 +44,14 @@ export const CarneImage = ({
         <>
 
             <div className="item-box">
-                {quantityPerItem > 0 && (
-                    <div className="item-quantity">{quantityPerItem}</div>
+                {cantidadporItem > 0 && (
+                    <div className="item-quantity">Cantidad añadida al carrito: {cantidadporItem}</div>
                 )}
-
-                <div>{nombre}</div>
-                {/*<img src={imgUrl} width="80" height="55"/>*/}
-                <div className="item-price">${precio}</div>
-
-                {quantityPerItem === 0 ? (
-                    <button className="item-add-button" onClick={() => addToCart()}>
-                        + Add to cart
-                    </button>
+                {cantidadporItem === 0 ? (
+                    <button className="item-add-button" onClick={() => addToCart()}>Añadir a carrito</button>
                 ) : (
-                    <button className="item-plus-button" onClick={() => addToCart()}>
-                        + add more
-                    </button>
+                    <button className="item-plus-button" onClick={() => addToCart()}>Añadir más</button>
                 )}
-
-
             </div>
 
             <div className="col">
@@ -72,7 +61,6 @@ export const CarneImage = ({
                             <img src={carneImageUrl} className="carneImage"/>
                             {/*<img src={`/assets/carne/${id}.jpg`} className="card-img" alt="blank"/>*/}
                         </div>
-
                         <div>
                             <h5 className="card-title">Nombre: {nombre}</h5>
                             <p className="card-text">Precio: {precio}</p>
@@ -83,7 +71,6 @@ export const CarneImage = ({
                                 Más..
                             </Link>
                         </div>
-
                     </div>
                     <Link to={"/carrito"} >
                         <li>

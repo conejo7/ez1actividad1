@@ -2,11 +2,15 @@ import React from 'react';
 import {Navbar1} from "../components/Navbar";
 import {Navigate, Route, Routes} from "react-router-dom";
 
-import {CarneCorriente, CarneNormal, CarneVip, ProductosGeneral} from "../pages";
-import {Search} from "../pages/Search";
-import {Productos} from "../pages/Productos";
+
+import {Search} from "../components/Search";
+import {Productos} from "../components/Productos";
 import {ProductosProvider} from "../components/ProductosContext";
 import {CarritoCompras} from "../components/CarritoCompras";
+import {CarneCorriente} from "../components/CarneCorriente";
+import {CarneNormal} from "../components/CarneNormal";
+import {CarneVip} from "../components/CarneVip";
+import {ProductosGeneral} from "../components/ProductosGeneral";
 
 
 export const ProductRoutes = () => {
@@ -22,10 +26,8 @@ export const ProductRoutes = () => {
                     <Route path="search" element={<Search/>}/>
                     <Route path="productos/:id" element={<Productos/>}/>
                     <Route path="carrito" element={<CarritoCompras/>}/>
-
                 </Routes>
                 </ProductosProvider>
-
         </>
     );
 };

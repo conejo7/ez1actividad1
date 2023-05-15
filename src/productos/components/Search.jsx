@@ -1,10 +1,10 @@
 import React from 'react';
-import {useForm} from "../components/useForm";
+import {useForm} from "./useForm";
 import {useLocation, useNavigate} from "react-router-dom";
 
 import queryString from 'query-string';
 import {getCarnesByName} from "../helpers";
-import {CarneImage} from "../components";
+import {CarneImage} from "./index";
 
 
 export const Search = () => {

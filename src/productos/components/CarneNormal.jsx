@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import {CarnesList} from "../components/CarnesList";
-import {ProductosContext} from "../components";
+import {CarnesList} from "./CarnesList";
+import {ProductosContext} from "./index";
 
 export const CarneNormal = () => {
     return (

@@ -13,11 +13,6 @@ export const Navbar1 = () => {
     const onLogout = () => {
         navigate('/login', {replace: true});
     }
-    const [producto, setProductos] = useContext(ProductosContext);
-
-    const quantity = producto.reduce((acc, curr) => {
-        return acc + curr.quantity;
-    }, 0);
 
     return (
         <>
@@ -31,12 +26,11 @@ export const Navbar1 = () => {
                         <Nav.Link as={Link} to="/corriente">PRODUCTO CORRIENTE</Nav.Link>
                         <Nav.Link as={Link} to="/search">BUSCAR PRODUCTOS (IMAGEN)</Nav.Link>
                         <Nav.Link as={Link} to="/table">PRODUCTOS GENERAL</Nav.Link>
-                        <Nav.Link as={Link} to="/carrito">CARRITO DE COMPRAS {quantity}</Nav.Link>
+                        <Nav.Link as={Link} to="/carrito">CARRITO DE COMPRAS </Nav.Link>
                     </Nav>
                     <button
                         className="button-salir"
-                         onClick={ onLogout }
-                    >
+                         onClick={ onLogout }>
                         Salir
                     </button>
                 </Container>

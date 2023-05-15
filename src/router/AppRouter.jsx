@@ -10,7 +10,6 @@ import {ProductRoutes} from "../productos";
 export const AppRouter = () => {
     return (
         <>
-            {/*añadimos padding*/}
                <div className="container">
                        <Routes>
                            <Route path="login" element={<Login/>}/>

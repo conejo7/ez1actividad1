@@ -1,5 +1,5 @@
 import React from 'react';
-import {CarnesList} from "../components/CarnesList";
+import {CarnesList} from "./CarnesList";
 
 export const CarneVip = () => {
     return (
