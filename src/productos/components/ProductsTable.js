@@ -13,7 +13,7 @@ function ProductRow({ product }) {
              {product.name}
         </span>;
     console.log(product.stock)
-    const stock = product.stock ? "Tiene Stock" : "No tiene Stock"
+    const stock = product.stock>0 ? product.stock : "No tiene Stock"
     return (
         <tr>
             <td>{name}</td>
