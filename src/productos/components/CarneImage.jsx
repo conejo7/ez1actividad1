@@ -42,8 +42,6 @@ export const CarneImage = ({
 
     return (
         <>
-
-
             <div className="col">
                 <div className="card">
                     <div className="row">

@@ -27,7 +27,7 @@ export const ProductRoutes = () => {
                     <Route path="productos/:id" element={<Productos/>}/>
                     <Route path="carrito" element={<CarritoCompras/>}/>
                 </Routes>
-                </ProductosProvider>
+            </ProductosProvider>
         </>
     );
 };

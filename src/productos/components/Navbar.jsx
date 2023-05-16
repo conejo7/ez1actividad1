@@ -18,7 +18,7 @@ export const Navbar1 = () => {
         <>
             <br/>
             <Navbar className="navbar">
-                <Container>
+                <Container className="">
                     <Navbar.Brand >SELECCIONE SU COMPRA</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/carne">PRODUCTO NORMAL</Nav.Link>
