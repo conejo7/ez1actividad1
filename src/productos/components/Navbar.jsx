@@ -23,7 +23,7 @@ export const Navbar1 = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/carne">PRODUCTO NORMAL</Nav.Link>
                         <Nav.Link as={Link} to="/especial">PRODUCTO ESPECIAL</Nav.Link>
-                        <Nav.Link as={Link} to="/corriente">PRODUCTO CORRIENTE</Nav.Link>
+                        <Nav.Link as={Link} to="/corriente">PRODUCTO COMÚN</Nav.Link>
                         <Nav.Link as={Link} to="/search">BUSCAR PRODUCTOS (IMAGEN)</Nav.Link>
                         <Nav.Link as={Link} to="/table">PRODUCTOS GENERAL</Nav.Link>
                         <Nav.Link as={Link} to="/carrito">CARRITO DE COMPRAS </Nav.Link>

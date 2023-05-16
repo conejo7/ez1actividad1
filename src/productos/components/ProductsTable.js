@@ -64,23 +64,20 @@ function SearchBar({filterText, onFilterTextChange}) {
 
 function FilterableProductTable({products}) {
 
-    //const {searchText, onInputChange} = useForm({searchText: q});
+
     const [filterText, setFilterText] = useState('');
-    //const [filterText, setFilterText] = useForm({filterText});
+
 
     return (
         <div>
             <SearchBar
                 filterText={filterText}
-                // inStockOnly={inStockOnly}
                 onFilterTextChange={setFilterText}
-                // onInStockOnlyChange={setInStockOnly}
             />
             <br/>
             <ProductTable
                 products={products}
                 filterText={filterText}
-                // inStockOnly={inStockOnly}
             />
         </div>
     );
