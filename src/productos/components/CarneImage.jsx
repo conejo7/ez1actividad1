@@ -10,7 +10,8 @@ export const CarneImage = ({
                                precio,
                                categoria,
                                stock,
-                               detalles
+                               detalles,
+                               empresa, descripcion
                            }) => {
     const [product, setProduct] = useContext(ProductosContext);
 
@@ -66,13 +67,15 @@ export const CarneImage = ({
                             <p className="card-text">Precio: {precio}</p>
                             <p>Categoria: {categoria}</p>
                             <p>Stock: {stock}</p>
-                            <p>Detalles:{detalles}</p>
+                            <p>Detalles: {detalles}</p>
+                            <p>Empresa: {empresa}</p>
+                            <p>Descripcion: {descripcion}</p>
                             <Link to={`/productos/${id}`}>
                                 Más..
                             </Link>
                         </div>
                     </div>
-                    <Link to={"/carrito"} >
+                    <Link to={"/carrito"}>
                         <li>
                             Ver Carrito de compras cantidad de productos: <span className="cart-count"></span>
                         </li>

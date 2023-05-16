@@ -40,8 +40,8 @@ export const Productos = () => {
                     <li className="list-group-item"> <b>Apreciación:</b> { carne.detalles } </li>
                 </ul>
 
-                <h5 className="mt-3"> Característica </h5>
-                <p>{ carne.categoria }</p>
+                <h5 className="mt-3"> Descripcion </h5>
+                <p>{ carne.descripcionLarga }</p>
 
                 <button
                     className="button-regresar"
