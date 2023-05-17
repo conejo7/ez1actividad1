@@ -1,7 +1,4 @@
-.card-subtitle {
 
-
-}
 
 .mb-2 {
     margin-bottom: 0.5rem;
@@ -38,10 +35,5 @@
     max-width: 160px;
     position: relative;
     user-select: none;
-
 }
 
-.button-53:hover:after {
-    bottom: 2px;
-    left: 2px;
-}

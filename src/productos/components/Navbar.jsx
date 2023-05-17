@@ -5,15 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link, useNavigate} from "react-router-dom";
-import {ProductosContext} from "./ProductosContext";
+
 export const Navbar1 = () => {
 
     const navigate = useNavigate();
-
     const onLogout = () => {
         navigate('/login', {replace: true});
     }
-
     return (
         <>
             <br/>

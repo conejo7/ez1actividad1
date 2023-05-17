@@ -5,8 +5,6 @@ import Login from "../auth/pages/Login";
 
 import {ProductRoutes} from "../productos";
 
-
-
 export const AppRouter = () => {
     return (
         <>
