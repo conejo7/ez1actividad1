@@ -8,8 +8,6 @@ export const CarritoCompras = () => {
 
     const [product, setProduct] = useContext(ProductosContext);
 
-
-
     const [images, setImages] = useState([]);
 
     const getImages = async() => {

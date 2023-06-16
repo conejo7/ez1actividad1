@@ -65,11 +65,7 @@ function SearchBar({filterText, onFilterTextChange}) {
 }
 
 function FilterableProductTable({products}) {
-
-
     const [filterText, setFilterText] = useState('');
-
-
     return (
         <div>
             <SearchBar

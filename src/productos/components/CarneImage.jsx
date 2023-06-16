@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {getCarnesByCategoria} from "../helpers";
+
 import {Link} from "react-router-dom";
 import {ProductosContext} from "./ProductosContext";
 
