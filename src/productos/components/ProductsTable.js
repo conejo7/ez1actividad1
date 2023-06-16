@@ -46,6 +46,7 @@ function ProductTable({products, filterText, inStockOnly}) {
 }
 
 function SearchBar({filterText, onFilterTextChange}) {
+
     return (
         <form>
             <br/>
@@ -57,6 +58,7 @@ function SearchBar({filterText, onFilterTextChange}) {
                 value={filterText}
                 onChange={(e) => onFilterTextChange(e.target.value)}
             />
+
             <br/>
         </form>
     );
